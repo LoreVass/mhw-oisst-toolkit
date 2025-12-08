@@ -1,202 +1,178 @@
 # 🌊 Marine Heatwave (MHW) Detection Toolkit – OISST v2.1
-A complete Python toolkit for detecting and analyzing **marine heatwaves (MHWs)** using **NOAA OISST v2.1 daily sea surface temperature**.
+
+A Python toolkit for detecting and analyzing **marine heatwaves (MHWs)** using **NOAA OISST v2.1 daily sea surface temperature**.
 
 ---
 
 ## 🔥 Features
-- Automated NOAA OISST year-check system
-- Fast SST loading over any custom or preset region
-- Daily climatology & percentile threshold (Hobday et al., 2016)
-- Full marine heatwave event detection
-- Annual summaries of MHW metrics
-- Trend analysis (linear regression + Mann–Kendall test)
-- Clean Tkinter graphical interface
 
-❗ *Note:* The interactive anomaly-map system was removed for stability.
-Use **Google Earth Engine** or **QGIS** for anomaly visualization.
+- Automated NOAA OISST year-check system  
+- Fast SST loading over any custom or preset region  
+- Daily climatology & percentile threshold (Hobday et al., 2016)  
+- Full marine heatwave event detection  
+- Annual summaries of MHW metrics  
+- Trend analysis (linear regression + Mann–Kendall test)  
+- Simple Tkinter graphical interface  
+
+> **Note**  
+> The interactive anomaly-map system was removed for stability.  
+> For anomaly maps, use **Google Earth Engine** or **QGIS**.
 
 ---
 
 ## 📁 Project Structure
-mhw-oisst-toolkit/
-│
-├── scripts/
-│ ├── main.py # GUI + full analysis pipeline
-│ ├── data_io.py # OISST loading utilities
-│ ├── mhw_core.py # Climatology + threshold + MHW detection
-│ ├── stats_tool.py # Trend + MK significance testing
-│ ├── plotting.py # Plot generation (PNG)
-│
-├── plots/ # Auto-generated figures
-├── tables/ # Auto-generated CSV analysis tables
-│
-├── README.md
-├── requirements.txt
-└── LICENSE
 
-yaml
-Copia codice
+    mhw-oisst-toolkit/
+    │
+    ├── scripts/
+    │   ├── main.py          # GUI + full analysis pipeline
+    │   ├── data_io.py       # OISST loading utilities
+    │   ├── mhw_core.py      # Climatology + threshold + MHW detection
+    │   ├── stats_tool.py    # Trend + MK significance testing
+    │   ├── plotting.py      # Plot generation (PNG)
+    │
+    ├── plots/               # Auto-generated figures
+    ├── tables/              # Auto-generated CSV analysis tables
+    │
+    ├── README.md
+    ├── requirements.txt
+    └── LICENSE
 
 ---
 
 ## 🚀 Installation
 
-### 1. Clone repository
-```bash
-git clone https://github.com/<YOUR_USERNAME>/mhw-oisst-toolkit.git
-cd mhw-oisst-toolkit
-2. Create virtual environment
-bash
-Copia codice
-python -m venv .venv
-source .venv/bin/activate      # macOS / Linux
-.venv\Scripts\activate         # Windows
-3. Install dependencies
-bash
-Copia codice
-pip install -r requirements.txt
-🌐 NOAA OISST v2.1 Data
-Download daily files (sst.day.mean.YYYY.nc) from:
+1. **Clone the repository**
+
+        git clone https://github.com/<YOUR_USERNAME>/mhw-oisst-toolkit.git
+        cd mhw-oisst-toolkit
+
+2. **Create a virtual environment**
+
+        python -m venv .venv
+        # macOS / Linux
+        source .venv/bin/activate
+        # Windows
+        .venv\Scripts\activate
+
+3. **Install dependencies**
+
+        pip install -r requirements.txt
+
+---
+
+## 🌐 NOAA OISST v2.1 Data
+
+Download daily files (`sst.day.mean.YYYY.nc`) from:
+
 https://psl.noaa.gov/data/gridded/data.noaa.oisst.v2.highres.html
 
 Place them in a folder such as:
 
-javascript
-Copia codice
-C:/Users/<YOU>/Data/OISST/
-The toolkit verifies all required years automatically.
+    C:/Users/<YOU>/Data/OISST/
 
-🖥 Running the Toolkit (GUI)
-Launch:
-
-bash
-Copia codice
-python scripts/main.py
-You will select:
-
-Region (preset or custom)
-
-Latitude/longitude bounds
-
-Analysis period
-
-Baseline climatology period
-
-Percentile threshold (default 0.9)
-
-Minimum heatwave duration (default 5 days)
-
-Folder containing the NOAA OISST files
-
-Outputs are saved to:
-
-plots/
-
-tables/
-
-📊 Output Files
-Figures (PNG)
-mhw_timeseries_<REGION>.png
-
-seasonal_cycle_<REGION>.png
-
-trend_sst_annual_mean_<REGION>.png
-
-trend_sst_annual_min_<REGION>.png
-
-trend_sst_annual_max_<REGION>.png
-
-trend_mhw_n_events_<REGION>.png
-
-trend_mhw_total_mhw_days_<REGION>.png
-
-trend_mhw_max_intensity_<REGION>.png
-
-trend_mhw_mean_intensity_<REGION>.png
-
-trend_mhw_longest_event_<REGION>.png
-
-Tables (CSV)
-mhw_events_<REGION>.csv
-
-mhw_yearly_summary_<REGION>.csv
-
-trend_significance_sst_<REGION>.csv
-
-trend_significance_mhw_metrics_<REGION>.csv
-
-🧠 Methodology Summary
-Implements the official Hobday et al. (2016) Marine Heatwave definition:
-
-Daily climatology computed over user-defined baseline
-
-Threshold = daily percentile (default: 90th)
-
-MHW = SST exceeds threshold for ≥ N consecutive days
-
-Event metrics computed:
-
-Duration
-
-Mean intensity
-
-Maximum intensity
-
-Cumulative intensity
-
-Annual summary metrics automatically extracted
-
-Trend analysis via linear regression
-
-Significance via Mann–Kendall
-
-📄 requirements.txt
-nginx
-Copia codice
-numpy
-pandas
-xarray
-dask
-netCDF4
-scipy
-matplotlib
-statsmodels
-tqdm
-tk
-📄 LICENSE (MIT)
-sql
-Copia codice
-MIT License
-
-Copyright (c) 2025 Lorenzo Vassura
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-🙌 Acknowledgements
-NOAA Physical Sciences Laboratory
-
-Hobday et al. (2016)
-
-Xarray, Dask, NumPy, SciPy, Matplotlib
-
-If used in research, please cite NOAA OISST v2.1 and Hobday et al. (2016).
-
-yaml
-Copia codice
+The toolkit will automatically check that all required years are present.
 
 ---
+
+## 🖥 Running the Toolkit (GUI)
+
+Run:
+
+    python scripts/main.py
+
+You will be asked to select:
+
+- Region (preset or custom)
+- Latitude/longitude bounds
+- Analysis period
+- Baseline climatology period
+- Percentile threshold (default: 0.9)
+- Minimum heatwave duration (default: 5 days)
+- Folder containing the NOAA OISST NetCDF files
+
+Outputs are saved into:
+
+- `plots/`
+- `tables/`
+
+---
+
+## 📊 Output Files
+
+### Figures (PNG)
+
+- `mhw_timeseries_<REGION>.png`  
+- `seasonal_cycle_<REGION>.png`  
+- `trend_sst_annual_mean_<REGION>.png`  
+- `trend_sst_annual_min_<REGION>.png`  
+- `trend_sst_annual_max_<REGION>.png`  
+- `trend_mhw_n_events_<REGION>.png`  
+- `trend_mhw_total_mhw_days_<REGION>.png`  
+- `trend_mhw_max_intensity_<REGION>.png`  
+- `trend_mhw_mean_intensity_<REGION>.png`  
+- `trend_mhw_longest_event_<REGION>.png`  
+
+### Tables (CSV)
+
+- `mhw_events_<REGION>.csv`  
+- `mhw_yearly_summary_<REGION>.csv`  
+- `trend_significance_sst_<REGION>.csv`  
+- `trend_significance_mhw_metrics_<REGION>.csv`  
+
+---
+
+## 🧠 Methodology Summary
+
+Implements the **Hobday et al. (2016)** Marine Heatwave definition:
+
+- Daily climatology computed over a user-defined baseline period  
+- Threshold = daily percentile (default: 90th)  
+- A marine heatwave (MHW) is detected when:
+  - SST > threshold  
+  - for **N** consecutive days (default: 5)  
+
+For each event, the toolkit computes:
+
+- Duration  
+- Mean intensity  
+- Maximum intensity  
+- Cumulative intensity  
+
+Annual summary metrics are then extracted, and trends are estimated using linear regression, with significance evaluated using the **Mann–Kendall** test.
+
+---
+
+## 📄 Requirements (requirements.txt)
+
+The project expects a `requirements.txt` similar to:
+
+    numpy
+    pandas
+    xarray
+    dask
+    netCDF4
+    scipy
+    matplotlib
+    statsmodels
+    tqdm
+    tk
+
+(You can extend this list if you add extra functionality.)
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.  
+See the file `LICENSE` for the full text.
+
+---
+
+## 🙌 Acknowledgements
+
+- NOAA Physical Sciences Laboratory – OISST v2.1  
+- Hobday et al. (2016) Marine Heatwave framework  
+- Xarray, Dask, NumPy, SciPy, Matplotlib  
+
+If you use this toolkit in research, please cite **NOAA OISST v2.1** and **Hobday et al. (2016)**.
