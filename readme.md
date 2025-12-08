@@ -1,6 +1,6 @@
 # 🌊 Marine Heatwave (MHW) Detection Toolkit – OISST v2.1
 
-A Python toolkit for detecting and analyzing **marine heatwaves (MHWs)** using **NOAA OISST v2.1 daily sea surface temperature**.
+A Python toolkit for detecting and analysing **marine heatwaves (MHWs)** using **NOAA OISST v2.1 daily sea surface temperature**.
 
 ---
 
@@ -44,7 +44,7 @@ A Python toolkit for detecting and analyzing **marine heatwaves (MHWs)** using *
 
 1. **Clone the repository**
 
-        git clone https://github.com/<YOUR_USERNAME>/mhw-oisst-toolkit.git
+        git clone https://github.com/Lorevass/mhw-oisst-toolkit.git
         cd mhw-oisst-toolkit
 
 2. **Create a virtual environment**
