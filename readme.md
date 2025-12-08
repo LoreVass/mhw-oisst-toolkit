@@ -158,7 +158,6 @@ The project expects a `requirements.txt` similar to:
     tqdm
     tk
 
-(You can extend this list if you add extra functionality.)
 
 ---
 
