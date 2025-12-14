@@ -200,6 +200,24 @@ bounds and temporal coverage.
 
 ---
 
+## 📊 Example Outputs
+
+### Figures (PNG)
+
+![Marine heatwave time series – Gulf of Naples](plots/examples/mhw_timeseries_gulf_of_naples.png)
+
+![Trend in total marine heatwave days – Gulf of Naples](plots/examples/mhw_trend_total_days_gulf_of_naples.png)
+
+### Tables (CSV)
+
+- [`mhw_yearly_summary_gulf_of_naples.csv`](tables/examples/mhw_yearly_summary_gulf_of_naples.csv)  
+  Annual summary of marine heatwave metrics.
+
+- [`trend_significance_mhw_metrics_gulf_of_naples.csv`](tables/examples/trend_significance_mhw_metrics_gulf_of_naples.csv)  
+  Mann–Kendall trend significance for MHW indicators.
+
+---
+
 ## 📄 License
 
 This project is licensed under the **MIT License**.  
