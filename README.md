@@ -208,6 +208,8 @@ bounds and temporal coverage.
 
 ![Trend in total marine heatwave days – Gulf of Naples](plots/examples/mhw_trend_total_days_Gulf_of_Naples.png)
 
+![Seasonal Cycle Surface Temperature - Gulf of Naples](/plots/examples/seasonal_cycle_Gulf_of_Naples.png).
+
 ### Tables (CSV)
 
 - [`mhw_yearly_summary_gulf_of_naples.csv`](/tables/examples/mhw_yearly_summary_Gulf_of_Naples.csv)  
