@@ -204,16 +204,16 @@ bounds and temporal coverage.
 
 ### Figures (PNG)
 
-![Marine heatwave time series – Gulf of Naples](plots/examples/mhw_timeseries_gulf_of_naples.png)
+![Marine heatwave time series – Gulf of Naples](plots/examples/mhw_timeseries_Gulf_of_Naples.png)
 
-![Trend in total marine heatwave days – Gulf of Naples](plots/examples/mhw_trend_total_days_gulf_of_naples.png)
+![Trend in total marine heatwave days – Gulf of Naples](plots/examples/mhw_trend_total_days_Gulf_of_Naples.png)
 
 ### Tables (CSV)
 
-- [`mhw_yearly_summary_gulf_of_naples.csv`](tables/examples/mhw_yearly_summary_gulf_of_naples.csv)  
+- [`mhw_yearly_summary_gulf_of_naples.csv`](tables/examples/mhw_yearly_summary_Gulf_of_aNples.csv)  
   Annual summary of marine heatwave metrics.
 
-- [`trend_significance_mhw_metrics_gulf_of_naples.csv`](tables/examples/trend_significance_mhw_metrics_gulf_of_naples.csv)  
+- [`trend_significance_mhw_metrics_gulf_of_naples.csv`](tables/examples/trend_significance_mhw_metrics_Gulf_of_Naples.csv)  
   Mann–Kendall trend significance for MHW indicators.
 
 ---
