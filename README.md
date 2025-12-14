@@ -213,7 +213,7 @@ bounds and temporal coverage.
 - [`mhw_yearly_summary_gulf_of_naples.csv`](/tables/examples/mhw_yearly_summary_Gulf_of_Naples.csv)  
   Annual summary of marine heatwave metrics.
 
-- [`trend_significance_mhw_metrics_gulf_of_naples.csv`](tables/examples/trend_significance_mhw_metrics_Gulf_of_Naples.csv)  
+- [`trend_significance_mhw_metrics_gulf_of_naples.csv`](/tables/examples/trend_significance_mhw_metrics_Gulf_of_Naples.csv)  
   Mann–Kendall trend significance for MHW indicators.
 
 ---
