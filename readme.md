@@ -157,7 +157,46 @@ The project expects a `requirements.txt` similar to:
     statsmodels
     tqdm
     tk
+    
+---
 
+## 🧪 Example Run – Gulf of Naples
+
+The following example illustrates a typical configuration used to analyse
+marine heatwaves in the **Gulf of Naples (Tyrrhenian Sea)**.
+
+### Configuration
+
+- **Latitude range:** 40.3 – 41.1 °N  
+- **Longitude range:** 13.8 – 14.8 °E  
+- **Analysis period:** 1984 – 2024  
+- **Baseline climatology:** 1984 – 2013  
+- **Percentile threshold:** 0.9 (90th percentile)  
+- **Minimum event duration:** 5 days  
+
+### Run command
+
+    python scripts/main.py
+
+After launching the GUI, insert the parameters above when prompted and select
+the folder containing the NOAA OISST v2.1 NetCDF files.
+
+### Generated outputs
+
+This configuration produces:
+
+- Daily SST time series with detected marine heatwave events  
+- Seasonal cycle and climatological threshold plots  
+- Long-term trends in SST and marine heatwave metrics  
+- Event-level and yearly summary tables  
+
+All outputs are automatically saved into:
+
+- `plots/`
+- `tables/`
+
+This setup can be easily adapted to other regions by modifying the spatial
+bounds and temporal coverage.
 
 ---
 
