@@ -34,14 +34,10 @@ A Python toolkit for detecting and analysing **marine heatwaves (MHWs)** using *
     │   ├── plotting.py          # Plot generation (PNG)
     │   ├── ml_features.py       # Feature engineering (NEW)
     │   ├── ml_prediction.py     # Random Forest classifier (NEW)
-    │   ├── ml_plotting.py       # ML visualizations (NEW)
+    │   ├── ml_plotting.py       # ML visualisations (NEW)
     │   ├── ml_workflow.py       # Standalone ML pipeline (NEW)
     │   └── example_ml_demo.py   # ML demonstration (NEW)
     │
-    ├── docs/
-    │   ├── ML_README.md                # ML documentation
-    │   ├── IMPLEMENTATION_GUIDE.md     # ML implementation guide
-    │   └── FORECAST_WINDOW_GUIDE.md    # Technical ML details
     │
     ├── plots/               # Auto-generated figures
     │   └── examples/        # Example outputs
