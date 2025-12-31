@@ -427,8 +427,5 @@ If you use this toolkit in research, please cite **NOAA OISST v2.1**, **Hobday e
 ---
 
 ## 🔗 Additional Resources
-
-- **Full ML Documentation:** [docs/ML_README.md](docs/ML_README.md)
-- **Implementation Guide:** [docs/IMPLEMENTATION_GUIDE.md](docs/IMPLEMENTATION_GUIDE.md)
 - **GitHub Repository:** https://github.com/LoreVass/mhw-oisst-toolkit
 - **NOAA OISST Data:** https://psl.noaa.gov/data/gridded/data.noaa.oisst.v2.highres.html
